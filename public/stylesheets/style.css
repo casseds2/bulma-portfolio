@@ -1,0 +1,73 @@
+html {
+	scroll-behavior: smooth;
+}
+
+button {
+	transition: 0.4s all ease;
+}
+
+button:hover {
+	background-color: #115fcc;
+	box-shadow: 0 8px 16px 0 rgba(32, 156, 238, 0.5);
+  transform: scale(1.1);
+  margin: 0px 5px 0px 5px;
+}
+
+strong {
+  transition: 0.3s all ease;
+}
+
+strong:hover {
+  transform: scale(1.1);
+}
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	border-radius: 5px;
+	height: 100%;
+}
+
+.card:hover {
+	box-shadow: 0 8px 16px 0 rgba(32, 156, 238, 0.5);
+}
+
+.card img {
+	border-radius: 15px 15px 0 0;
+}
+
+footer > div > span {
+	margin: px;
+}
+
+.date-text {
+	text-decoration: underline;
+	font-size: smaller;
+}
+
+.separator {
+	background-color: #209cee;
+	opacity: 0.3;
+}
+
+.icon {
+  transition: 0.4s all ease;
+}
+
+.icon:hover {
+  transform: scale(1.5);
+}
+
+.image {
+  transition: 0.4s all ease;
+}
+
+.image:hover {
+  transform: scale(1.2);
+  margin: 10px;
+}
+
+.icon-image:hover {
+  transform: rotate(360deg);
+  margin: 0px;
+}

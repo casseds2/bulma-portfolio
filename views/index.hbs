@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Stephen Cassedy's portfolio website">
+    <title>Stephen Cassedy</title>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/stylesheets/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <script defer src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script defer src="/javascript/index.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+
+  <body>
+
+    {{!-- Navbar --}}
+    <nav class="navbar is-fixed-top" role="navigation" id="navigation">
+      <div class="navbar-menu" :class="{ 'is-active' : isShown  }">
+        <div class="navbar-start">
+          <a class="navbar-item" href="#about" @click="isShown = !isShown">
+            <strong>About</strong>
+          </a>
+          <a class="navbar-item" href="#technology" @click="isShown = !isShown">
+            <strong>Technology</strong>
+          </a>
+          <a class="navbar-item" href="#articles" @click="isShown = !isShown">
+            <strong>Articles</strong>
+          </a>
+          <a class="navbar-item" href="#contact" @click="isShown = !isShown">
+            <strong>Contact</strong>
+          </a>
+        </div>
+      </div>
+      <a @click="isShown = !isShown" class="navbar-burger" :class="{ 'is-active': isShown }">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </nav>
+
+    {{!-- Welcome Hero --}}
+    <section class="hero is-info">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Stephen Cassedy
+          </h1>
+          <h1 class="subtitle">
+            Welcome to my site!
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    {{!-- About Me --}}
+    <section class="section" id="about">
+      <div class="container">
+        <h1 class="title">About</h1>
+        <div class="columns is-vcentered">
+          <div class="column is-4">
+            <figure class="image">
+              <img width="1580" height="1077" loading="lazy" alt="Profile Image" class="is-rounded"
+                src="/images/profile.jpg">
+            </figure>
+          </div>
+          <div class="column is-1"></div>
+          <div class="column is-6">
+            <p class="has-text-justified">
+              Hi! My name is <strong>Stephen Cassedy</strong>. I'm very passionate and dedicated to my work. With two
+              years
+              experience in fullstack development, I have acquired many skills required to build richly featured
+              products.
+              I currently work at
+              <strong><a href="https://cellusys.com">Cellusys</a></strong> in the <strong>Internet of Things</strong>
+              department. I enjoy every step of the development
+              process from requirements gathering to deployment. If you wish to contact me, please don't hesitate to get in touch!
+            </p>
+            <hr />
+            <div class="columns">
+              <span class="column" style="text-align:left;"><strong>Birthday:</strong> 01.07.1995</span>
+              <span class="column" style="text-align:left;"><strong>Profession:</strong> Software Engineer</span>
+            </div>
+            <div class="columns">
+              <span class="column" style="text-align:left;"><strong>Home:</strong> Dublin, Ireland</span>
+              <span class="column" style="text-align:left;"><strong>Degree:</strong> BSc. in Computer
+                Applications</span>
+            </div>
+            <div class="columns">
+              <span class="column" style="text-align:left;"><strong>Mail:</strong> <a
+                  href="mailto:casseds95@gmail.com">casseds95@gmail.com</a></span>
+              <span class="column" style="text-align:left;"><strong>Mobile:</strong> 0851185656</span>
+            </div>
+            <button class="button is-info"><a href="#contact" style="color: white;">Contact</a></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <hr class="separator" />
+    </div>
+
+    {{!-- Technology --}}
+    <section class="section" id="technology">
+      <div class="container">
+        <h1 class="title">Technology</h1>
+        <h1 class="subtitle">Some tech I work with...</h1>
+        <div class="columns is-multiline">
+          {{#each technologies}}
+            <div class="column is-4">
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image icon-image is-64x64">
+                    <img src={{img}} alt="Placeholder image" style="border-radius: 30px;">
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="title">
+                    {{title}}
+                  </div>
+                  <div class="content">
+
+                    {{body}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <hr class="separator" />
+    </div>
+
+    {{!-- Articles --}}
+    <section class="section" id="articles">
+      <div class="container">
+        <h1 class="title">Articles</h1>
+        <h1 class="subtitle">Articles I like...</h1>
+        <div class="columns is-multiline">
+          {{#each articles}}
+            <div class="column is-4">
+              <div class="card">
+                <div class="card-content">
+                  <p class="title">
+                    {{title}}
+                  </p>
+                  <p class="subtitle date-text">
+                    {{timestamp}}
+                  </p>
+                  <hr />
+                  <div class="content">
+                    {{description}}
+                  </div>
+                </div>
+                <footer class="card-footer">
+                  <a href={{url}} class="card-footer-item">Find Out More</a>
+                </footer>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <hr class="separator" />
+    </div>
+
+    {{!-- Contact --}}
+    <section class="section" id="contact">
+      <div class="container">
+        <h1 class="title">Contact</h1>
+        <div class="columns  is-centered">
+          <div class="column is-half">
+            <div class="field">
+              <div class="control">
+                <label for="name" />
+                <input class="input is-info" type="text" id="name" name="name" v-model="name" placeholder="Name">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <label for="email" />
+                <input class="input is-info" type="email" id="email" name="email" v-model="email" placeholder="Email">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <label for="message" />
+                <textarea class="textarea is-info" id="message" name="message" v-model="message"
+                  placeholder="Message"></textarea>
+              </div>
+            </div>
+            <button class="button is-info" @click="sendMessage">Send Message</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{!-- Footer --}}
+    <section class="section">
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <a href="https://github.com/casseds2">
+            <span class="icon is-large has-text-black">
+              <i class="fab fa-github fa-lg"></i>
+            </span>
+          </a>
+          <a href="https://www.linkedin.com/in/stephen-cassedy-178454ba/">
+            <span class="icon is-large has-text-info">
+              <i class="fab fa-linkedin fa-lg"></i>
+            </span>
+          </a>
+          <a href="https://www.facebook.com/stephen.cassedy">
+            <span class="icon is-large has-text-link">
+              <i class="fab fa-facebook fa-lg"></i>
+            </span>
+          </a>
+          <a href="https://www.instagram.com/staevecassedy/?hl=en">
+            <span class="icon is-large has-text-danger">
+              <i class="fab fa-instagram fa-lg"></i>
+            </span>
+          </a>
+          <a href="https://twitter.com/Phtephens">
+            <span class="icon is-large has-text-info">
+              <i class="fab fa-twitter fa-lg"></i>
+            </span>
+          </a>
+        </div>
+      </footer>
+    </section>
+
+  </body>
+
+</html>
