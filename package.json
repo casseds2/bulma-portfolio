@@ -1,0 +1,38 @@
+{
+	"name": "portfolio",
+	"version": "1.0.0",
+	"description": "Portfolio website of Stephen Cassedy",
+	"main": "index.js",
+	"scripts": {
+		"dev": "webpack-dev-server --mode development",
+		"clean": "rimraf ./dist",
+		"build": "npm run clean && webpack --mode production"
+	},
+	"author": "Stephen Cassedy",
+	"license": "ISC",
+	"dependencies": {
+		"babel-polyfill": "^6.26.0",
+		"firebase": "^7.6.0",
+		"vue": "^2.6.11",
+		"vuex": "^3.1.2"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.7.5",
+		"@babel/preset-env": "^7.7.6",
+		"babel-loader": "^8.0.6",
+		"css-loader": "^3.3.2",
+		"eslint": "^6.7.2",
+		"eslint-config-airbnb-base": "^14.0.0",
+		"eslint-plugin-import": "^2.19.1",
+		"eslint-plugin-vue": "^6.0.1",
+		"file-loader": "^5.0.2",
+		"html-webpack-plugin": "^3.2.0",
+		"rimraf": "^3.0.0",
+		"vue-loader": "^15.8.1",
+		"vue-style-loader": "^4.1.2",
+		"vue-template-compiler": "^2.6.11",
+		"webpack": "^4.41.2",
+		"webpack-cli": "^3.3.10",
+		"webpack-dev-server": "^3.9.0"
+	}
+}
