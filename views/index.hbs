@@ -29,9 +29,9 @@
           <a class="navbar-item" href="#articles" @click="isShown = !isShown">
             <strong>Articles</strong>
           </a>
-          <a class="navbar-item" href="#contact" @click="isShown = !isShown">
+          {{!-- <a class="navbar-item" href="#contact" @click="isShown = !isShown">
             <strong>Contact</strong>
-          </a>
+          </a> --}}
         </div>
       </div>
       <a @click="isShown = !isShown" class="navbar-burger" :class="{ 'is-active': isShown }">
@@ -45,10 +45,10 @@
     <section class="hero is-info">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title">
+          {{!-- <h1 class="title">
             Stephen Cassedy
-          </h1>
-          <h1 class="subtitle">
+          </h1> --}}
+          <h1 class="title">
             Welcome to my site!
           </h1>
         </div>
@@ -69,12 +69,11 @@
           <div class="column is-1"></div>
           <div class="column is-6">
             <p class="has-text-justified">
-              Hi! My name is <strong>Stephen Cassedy</strong>. I'm very passionate and dedicated to my work. With two
-              years
-              experience in fullstack development, I have acquired many skills required to build richly featured
-              products.
-              I currently work at
-              <strong><a href="https://cellusys.com">Cellusys</a></strong> in the <strong>Internet of Things</strong>
+              Hi! My name is <strong>Stephen Cassedy</strong>. I'm very passionate and dedicated to my work. With a
+              number of years of experience in fullstack development, I have acquired many skills required to build
+              richly featured products.
+              I currently work as a Senior Software Engineer at
+              <strong><a href="https://cellusys.com">Cellusys</a></strong> in the <strong>Roaming</strong>
               department. I enjoy every step of the development
               process from requirements gathering to deployment. If you wish to contact me, please don't hesitate to get in touch!
             </p>
@@ -93,7 +92,7 @@
                   href="mailto:casseds95@gmail.com">casseds95@gmail.com</a></span>
               <span class="column" style="text-align:left;"><strong>Mobile:</strong> 0851185656</span>
             </div>
-            <button class="button is-info"><a href="#contact" style="color: white;">Contact</a></button>
+            {{!-- <button class="button is-info"><a href="#contact" style="color: white;">Contact</a></button> --}}
           </div>
         </div>
       </div>
@@ -173,7 +172,7 @@
     </div>
 
     {{!-- Contact --}}
-    <section class="section" id="contact">
+    {{!-- <section class="section" id="contact">
       <div class="container">
         <h1 class="title">Contact</h1>
         <div class="columns  is-centered">
@@ -201,7 +200,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> --}}
 
     {{!-- Footer --}}
     <section class="section">
